@@ -1,25 +1,25 @@
-import logo from './logo.svg';
-import './App.css';
+import React, { useEffect } from 'react';
+import {BrowserRouter, Routes, Route, useLocation } from 'react-router-dom';
 
-function App() {
+import Dashboard from "./pages/dashboard/Dashboard";
+import Login from './pages/login/Login';
+
+export default function App() {
+  const location = useLocation;
+
+  useEffect(() => {
+    document.querySelector('html').style.scrollBehavior = 'auto';
+    window.scroll({ top: 0 });
+    document.querySelector('html').style.scrollBehavior = '';
+  }, [location.pathname]); 
+  
   return (
-    <div className="App">
-      <header className="App-header">
-        <img src={logo} className="App-logo" alt="logo" />
-        <p>
-          Edit <code>src/App.js</code> and save to reload.
-        </p>
-        <a
-          className="App-link"
-          href="https://reactjs.org"
-          target="_blank"
-          rel="noopener noreferrer"
-        >
-          Learn React
-        </a>
-      </header>
-    </div>
-  );
-}
+    <BrowserRouter>
+      <Routes>
+        <Route exact path="/" element={<Login />}/>
+        <Route path='/dashboard' element={<Dashboard />}/>
+      </Routes>
+    </BrowserRouter>
+  )
+};
 
-export default App;
