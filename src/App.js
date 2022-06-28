@@ -3,6 +3,8 @@ import {BrowserRouter, Routes, Route, useLocation } from 'react-router-dom';
 
 import Dashboard from "./pages/dashboard/Dashboard";
 import Login from './pages/login/Login';
+import Vehicles from './components/vehicles/Vehicles';
+
 
 export default function App() {
   const location = useLocation;
@@ -18,6 +20,7 @@ export default function App() {
       <Routes>
         <Route exact path="/" element={<Login />}/>
         <Route path='/dashboard' element={<Dashboard />}/>
+        <Route path='/vehicles' element={<Vehicles />} />
       </Routes>
     </BrowserRouter>
   )

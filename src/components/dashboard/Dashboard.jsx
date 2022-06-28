@@ -3,6 +3,8 @@ import { Link } from 'react-router-dom';
 
 import './styles.css'
 
+import photoProfile from '../../img/pp-profile.png'
+
 const Dashboard = () => {
     return (
         <div className="container">
@@ -12,25 +14,25 @@ const Dashboard = () => {
                 <ul className="nav-menu">
                     <Link className="link-nav" to={'/dashboard'}><li className="dashboard">Dashboard</li></Link>
                     <li className="master-data">Master Data</li>
-                    <ul className="lis-data">
-                        <li>Data Kendaraan</li>
-                        <li>Data Admin</li>
-                        <li>Data User</li>
-                        <li>Data Pemegang</li>
-                    </ul>
-                    <li>Laporan</li>
+                    <ul className="list-data">
+                        <Link to={'/vehicles'}><li>Data Kendaraan</li></Link>
+                        <Link to={'/administrator'}><li>Data Admin</li></Link>
+                        <Link to={'/user'}><li>Data User</li></Link>
+                        <Link to={'/holder'}><li>Data Pemegang</li></Link>
+                    </ul>   
+                    <Link to={'/report'}><li className="report">Laporan</li></Link>
                 </ul>
                 <ul>
-                    <li>Logout</li>
+                    <Link to={'/'}><li className="logout">Logout</li></Link>
                 </ul>
             </header>
 
             <main>
                 <article className="header-dashboard">
                     <h2>Dashboard Admin</h2>
-                    <div>
+                    <div className="profile">
                         <p>Selamat Datang, <span>Admin!</span></p>
-                        <img src="" alt="profile" />
+                        <img src={photoProfile} alt="profile" />
                     </div>
                 </article>
 

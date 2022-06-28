@@ -151,3 +151,65 @@ main {
 .profile p span {
     font-weight: 600;
 }
+
+.profile img {
+    margin-left: 1rem;
+    width: 2.5rem;
+}
+
+.content {
+    height: 75vh;
+    padding: 2rem;
+    display: flex;
+    justify-content: space-between;
+    flex-wrap: wrap;
+    background: radial-gradient(129% 217.74% at -23.26% 20.08%, #F4F4F4 0%, #F9F9F9 100%);
+}
+
+.content .card {
+    margin: 1rem 0;
+    width: 13rem;
+    height: 9rem;
+    text-align: center;
+    background: #FFFFFF;
+    box-shadow: 0px 4px 10px rgba(0, 0, 0, 0.25);
+    border-radius: 10px;
+}
+
+.content .card p{
+    margin: 0;
+    font-size: 5rem;
+    font-weight: 700;
+    font-style: italic;
+}
+
+.content .card span {
+    font-size: 1rem;
+}
+
+.content .vehicle h3 {
+    margin: 0;
+    padding: 0.7rem;
+    background: #C3423F;
+    color: #ffffff;
+    font-size: 1rem;
+    border-radius: 10px 10px 0px 0px;
+}
+
+.content .user h3 {
+    margin: 0;
+    padding: 0.7rem;
+    background: #21A179;
+    color: #ffffff;
+    font-size: 1rem;
+    border-radius: 10px 10px 0px 0px;
+}
+
+.content .holder h3 {
+    margin: 0;
+    padding: 0.7rem;
+    background: #247BA0;
+    color: #ffffff;
+    font-size: 1rem;
+    border-radius: 10px 10px 0px 0px;
+}
