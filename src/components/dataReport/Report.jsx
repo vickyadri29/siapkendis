@@ -1,16 +1,17 @@
 import React from "react";
-import './styles.css';
 
+import { useState } from "react";
 import { Link } from "react-router-dom";
+
+import './styles.css';
 
 import photoProfile from '../../img/pp-profile.png'
 
-import { useState } from "react";
-
-const Vehicles = () => {
-    const [vehicles, setVehicles] = useState(
+const Report = () =>{
+    const [report, setReport] = useState(
         [
-            {id:1, nama: "Mio", merk:"Yamaha", noRangka: 9235553, noMesin: 5432346, noBPKB: 129423, noPolisi: 5342346, tahun:2022, status: "Tersedia", keterangan: "Ini adalah Kendaraan"}
+            {id:1, namaKendaraan: "Mio 125CC", namaPeminjam: "Putra", noHP: "082385676651", tglGuna: "29-09-2022", tglKembali: "2-10-2022"},
+            {id:2, namaKendaraan: "Fu Merah", namaPeminjam: "Sinta", noHP: "082385664542", tglGuna: "01-10-2022", tglKembali: "5-10-2022"}
         ]
     ) 
 
@@ -37,7 +38,7 @@ const Vehicles = () => {
 
             <main>
                 <article className="header-dashboard">
-                    <h2>Kendaraan Dinas</h2>
+                    <h2>Laporan</h2>
                     <div className="profile">
                         <p>Selamat Datang, <span>Admin!</span></p>
                         <img src={photoProfile} alt="profile" />
@@ -45,41 +46,38 @@ const Vehicles = () => {
                 </article>
 
                 <article className="contents">
-                    <h3>Data Kendaraan</h3>
-                    <Link to={"/add-data-vehicles"}><button>Tambah Data</button></Link>
+                    <h3>Data Laporan</h3>
+                    <Link to={"/add-data-user"}><button>Tambah Data</button></Link>
                 </article>
 
                 <div className="table-vehicles">
+                    <div>
+                        <button className="btn-printall">Cetak Semua Laporan</button>
+                    </div>
                     <table>
                         <thead>
                             <tr>
                                 <th>Id</th>
-                                <th>Nama</th>
-                                <th>Merk</th>
-                                <th>No. Rangka</th>
-                                <th>No. Mesin</th>
-                                <th>No. BPKB</th>
-                                <th>No. Polisi</th>
-                                <th>Tahun</th>
-                                <th>Status</th>
-                                <th>Keterangan</th>
+                                <th>Nama Kendaraan</th>
+                                <th>Nama Peminjam</th>
+                                <th>No.HP</th>
+                                <th>Tgl Penggunaan</th>
+                                <th>Tgl Kembali</th>
+                                <th>Print</th>
                                 <th>Action</th>
                             </tr>
                         </thead>
-                        {vehicles.map((val, key) => {
+                        {report.map((val, key) => {
                             return (
                                 <tbody>
                                     <tr key={key}>
                                         <td>{val.id}</td>
-                                        <td>{val.nama}</td>
-                                        <td>{val.merk}</td>
-                                        <td>{val.noRangka}</td>
-                                        <td>{val.noMesin}</td>
-                                        <td>{val.noBPKB}</td>
-                                        <td>{val.noPolisi}</td>
-                                        <td>{val.tahun}</td>
-                                        <td>{val.status}</td>
-                                        <td>{val.keterangan}</td>
+                                        <td>{val.namaKendaraan}</td>
+                                        <td>{val.namaPeminjam}</td>
+                                        <td>{val.noHP}</td>
+                                        <td>{val.tglGuna}</td>
+                                        <td>{val.tglKembali}</td>
+                                        <td><button className="btn-print">Cetak</button></td>
                                         <td><Link to={"/"}>Edit</Link> | <Link to={"/"}>Hapus</Link></td>
                                     </tr>
                                 </tbody>
@@ -92,4 +90,4 @@ const Vehicles = () => {
     )
 }
 
-export default Vehicles;
+export default Report;

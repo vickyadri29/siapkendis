@@ -3,7 +3,9 @@ import React from "react";
 import VehiclesComponent from '../../components/vehicles/Vehicles';
 
 const Vehicles = () => {
-    <VehiclesComponent />
+    return (
+        <VehiclesComponent />
+    )
 }
 
 export default Vehicles;

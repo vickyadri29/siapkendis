@@ -1,0 +1,30 @@
+
+.btn-printall {
+    font-family: 'Raleway', sans-serif;
+    font-size: 0.9rem;
+    font-weight: 600;
+    width: 12rem;
+    height: 2.7rem;
+    padding: 0.5rem 5px;
+    background: #21A179;
+    color: #fff;
+    border: 1px solid #21A179;
+    border-radius: 5px;
+    cursor: pointer;
+    transition: 0.4s ease-out;
+}
+
+.btn-print {
+    font-family: 'Raleway', sans-serif;
+    font-size: 0.9rem;
+    font-weight: 600;
+    width: 4rem;
+    height: 2.4rem;
+    padding: 0.5rem 5px;
+    background: #21A179;
+    color: #fff;
+    border: 1px solid #21A179;
+    border-radius: 5px;
+    cursor: pointer;
+    transition: 0.4s ease-out;
+}

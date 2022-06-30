@@ -3,8 +3,15 @@ import {BrowserRouter, Routes, Route, useLocation } from 'react-router-dom';
 
 import Dashboard from "./pages/dashboard/Dashboard";
 import Login from './pages/login/Login';
-import Vehicles from './components/vehicles/Vehicles';
-
+import Vehicles from './pages/vehicles/Vehicles';
+import Administrator from './pages/administrator/Admin';
+import User from './pages/user/User';
+import HolderVehicle from './pages/holderVehicle/Holder';
+import Reports from './pages/dataReport/Report';
+import AddDataVehicles from './components/addData/DataVehicles';
+import AddDataAdmin from './components/addData/DataAdmin';
+import AddDataUser from './components/addData/DataUser';
+import AddDataHolder from './components/addData/DataHolder';
 
 export default function App() {
   const location = useLocation;
@@ -21,8 +28,15 @@ export default function App() {
         <Route exact path="/" element={<Login />}/>
         <Route path='/dashboard' element={<Dashboard />}/>
         <Route path='/vehicles' element={<Vehicles />} />
+        <Route path='/administrator' element={<Administrator />} />
+        <Route path='/user' element={<User />} />
+        <Route path='/holder' element={<HolderVehicle />} />
+        <Route path='/report' element={<Reports />}/>
+        <Route path='/add-data-vehicles' element={<AddDataVehicles />} />
+        <Route path='/add-data-admin' element={<AddDataAdmin />} />
+        <Route path='/add-data-user' element={<AddDataUser />} />
+        <Route path='/add-data-holder' element={<AddDataHolder/>} />
       </Routes>
     </BrowserRouter>
   )
 };
-

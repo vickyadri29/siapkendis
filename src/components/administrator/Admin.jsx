@@ -1,16 +1,15 @@
 import React from "react";
 import './styles.css';
-
 import { Link } from "react-router-dom";
-
-import photoProfile from '../../img/pp-profile.png'
-
 import { useState } from "react";
 
-const Vehicles = () => {
-    const [vehicles, setVehicles] = useState(
+import photoProfile from '../../img/pp-profile.png';
+
+const Admin = () => {
+    const [admin, setAdmin] = useState(
         [
-            {id:1, nama: "Mio", merk:"Yamaha", noRangka: 9235553, noMesin: 5432346, noBPKB: 129423, noPolisi: 5342346, tahun:2022, status: "Tersedia", keterangan: "Ini adalah Kendaraan"}
+            {id:1, nama: "Admin", email: "administrator@gmail.com", noHP: "082368423456"},
+            {id:2, nama: "Jindan", email: "jindanza@gmail.com", noHP: "085376544457"}
         ]
     ) 
 
@@ -37,7 +36,7 @@ const Vehicles = () => {
 
             <main>
                 <article className="header-dashboard">
-                    <h2>Kendaraan Dinas</h2>
+                    <h2>Admin</h2>
                     <div className="profile">
                         <p>Selamat Datang, <span>Admin!</span></p>
                         <img src={photoProfile} alt="profile" />
@@ -45,8 +44,8 @@ const Vehicles = () => {
                 </article>
 
                 <article className="contents">
-                    <h3>Data Kendaraan</h3>
-                    <Link to={"/add-data-vehicles"}><button>Tambah Data</button></Link>
+                    <h3>Data Admin</h3>
+                    <Link to={'/add-data-admin'}><button>Tambah Data</button></Link>
                 </article>
 
                 <div className="table-vehicles">
@@ -55,31 +54,19 @@ const Vehicles = () => {
                             <tr>
                                 <th>Id</th>
                                 <th>Nama</th>
-                                <th>Merk</th>
-                                <th>No. Rangka</th>
-                                <th>No. Mesin</th>
-                                <th>No. BPKB</th>
-                                <th>No. Polisi</th>
-                                <th>Tahun</th>
-                                <th>Status</th>
-                                <th>Keterangan</th>
+                                <th>Email</th>
+                                <th>No.HP</th>
                                 <th>Action</th>
                             </tr>
                         </thead>
-                        {vehicles.map((val, key) => {
+                        {admin.map((val, key) => {
                             return (
                                 <tbody>
                                     <tr key={key}>
                                         <td>{val.id}</td>
                                         <td>{val.nama}</td>
-                                        <td>{val.merk}</td>
-                                        <td>{val.noRangka}</td>
-                                        <td>{val.noMesin}</td>
-                                        <td>{val.noBPKB}</td>
-                                        <td>{val.noPolisi}</td>
-                                        <td>{val.tahun}</td>
-                                        <td>{val.status}</td>
-                                        <td>{val.keterangan}</td>
+                                        <td>{val.email}</td>
+                                        <td>{val.noHP}</td>
                                         <td><Link to={"/"}>Edit</Link> | <Link to={"/"}>Hapus</Link></td>
                                     </tr>
                                 </tbody>
@@ -92,4 +79,4 @@ const Vehicles = () => {
     )
 }
 
-export default Vehicles;
+export default Admin;
