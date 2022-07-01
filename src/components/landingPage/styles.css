@@ -1,0 +1,57 @@
+.landingpage-container header{
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+    align-items: center;
+    padding: 0 2rem;
+}
+
+header .logo-lp {
+    display: flex;
+    align-items: center;
+}
+
+.logo-lp img {
+    margin-right: 0.5rem;
+    width: 2.4rem;
+    height: 3rem;
+}
+
+header nav ul{
+    font-weight: 600;
+    display: flex;
+}
+
+nav ul li {
+    margin-left: 3rem;
+}
+
+.each-slide-effect > div {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    background-size: cover;
+    width: 100%;
+    height: 100vh;
+}
+  
+/* .each-slide-effect span {
+    font-size: 1rem;
+    margin-top: 35rem;
+    padding: 0.5rem 2rem;
+    background: #ffffff;
+    border: 1px solid #ffffff;
+    border-radius: 5px;
+    text-align: center;
+} */
+
+footer {
+    font-weight: 600;
+    color: #fff;
+    padding: 1rem;
+    background: #17515E;
+}
+
+footer span {
+    font-weight: 400;
+}

@@ -1,6 +1,7 @@
 import React, { useEffect } from 'react';
 import {BrowserRouter, Routes, Route, useLocation } from 'react-router-dom';
 
+import LandingPage from './pages/landingPage/LandingPage';
 import Dashboard from "./pages/dashboard/Dashboard";
 import Login from './pages/login/Login';
 import Vehicles from './pages/vehicles/Vehicles';
@@ -25,7 +26,8 @@ export default function App() {
   return (
     <BrowserRouter>
       <Routes>
-        <Route exact path="/" element={<Login />}/>
+        <Route exact path='/' element={<LandingPage />}/>
+        <Route exact path='login' element={<Login />}/>
         <Route path='/dashboard' element={<Dashboard />}/>
         <Route path='/vehicles' element={<Vehicles />} />
         <Route path='/administrator' element={<Administrator />} />

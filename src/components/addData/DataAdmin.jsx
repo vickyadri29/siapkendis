@@ -1,13 +1,13 @@
-import React from "react";
+import React, { useState } from "react";
 
 import { Link } from "react-router-dom";
 
 import photoProfile from '../../img/pp-profile.png';
-
 import './styles.css'
 
 const dataAdmin = () => {
-  return (
+    const [val, setVal] = useState();
+    return (
     <div className="container">
         <header>
                 <Link to={"/dashboard"}><h1>SIAPKENDIS</h1></Link>
@@ -44,26 +44,26 @@ const dataAdmin = () => {
                     <form action="">
                         <label htmlFor="id">
                             ID<br />
-                            <input type="text" name="id"  className="id"/>
+                            <input type="text" name="id"  className="id" value={val}/>
                         </label>
                         <label htmlFor="nama">
                             Nama Admin<br />
-                            <input type="text" name="nama"  className="name"/>
+                            <input type="text" name="nama"  className="name" value={val}/>
                         </label><br />
-                        <label htmlFor="merk">
+                        <label htmlFor="email">
                             Email <br />
-                            <input type="text" name="merk" />
+                            <input type="text" name="email" value={val}/>
                         </label>
-                        <label htmlFor="noRangka">
+                        <label htmlFor="noHP">
                             No.HP <br />
-                            <input type="text" name="noRangka" />
+                            <input type="text" name="noHP" value={val}/>
                         </label>
 
                     </form>
                     <div className="btn-add">
                         <div className="btn-left">
-                            <button className="btn-back">Kembali</button>
-                            <button className="btn-reset">Reset</button>
+                            <Link to={"/administrator"}><button className="btn-back">Kembali</button></Link>
+                            <button onClick={() => setVal(() => "")} className="btn-reset">Reset</button>
                         </div>
                         <button className="btn-save">Simpan</button>
                     </div>
