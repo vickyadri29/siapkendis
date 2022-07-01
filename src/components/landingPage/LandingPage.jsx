@@ -1,6 +1,7 @@
 import React, { useEffect, useState } from "react";
 import { Link } from "react-router-dom";
 
+import ChangePageTitle from '../ChangePageTitle';
 import './styles.css';
 import Logo from '../../img/logo1.png';
 
@@ -9,15 +10,6 @@ import sliderTwo from '../../img/img2.jpeg';
 import sliderThree from '../../img/img3.jpeg';
 import sliderFour from '../../img/img4.jpeg';
 
-// const Thumbnail = ({ arr, image, index }) => {
-//     return (<div className="thumbnail">
-//         {
-//             arr.map((imgsrc, i) => (
-//                 <img key={i} height="50" src={imgsrc} onClick={()=>image(i)} className={index===1 ? 'active' : ''}/>
-//             ))}
-//             </div>
-//     )
-// }
 
 const SlideImage = ({ imgs }) => {
     const [index, setIndex] = useState(0)
@@ -26,27 +18,16 @@ const SlideImage = ({ imgs }) => {
         setIndex(0)
     }, [])
 
-    const next = () => {
-        if (index === imgs.length -1){
-            setIndex(0)
-        }else{
-            setIndex(index + 1)
-        }
-    }
-    const prev = () => {
-        if (index === 0) {
-            setIndex(imgs.length - 1)
-        } else {
-            setIndex(index - 1)
-        }
-    }
-
     return ( 
         <div className="slideshow">
+            <>
+            <ChangePageTitle pageTitle={"Selamat Datang di SIAPKENDIS"} />
+            </>
+            <h1>SELAMAT DATANG DI SIAPKENDIS <br />MILIK BADAN PENGELOLAAN KEUANGAN DAN ASET DAERAH</h1>
             <img className="mainImg" src={imgs[index]} alt="sliders" />
             <div className="actions">
-                <button onClick={prev}>Prev</button>
-                <button onClick={next}>Next</button>
+                {/* <button onClick={prev}>Prev</button>
+                <button onClick={next}>Next</button> */}
             </div>
     </div>
     )
@@ -64,7 +45,7 @@ const LandingPage = () => {
 
                 <nav>
                     <ul>
-                        <Link to={"/dashboard"}><li>Dashboard</li></Link>
+                        <Link to={"/"}><li>Home</li></Link>
                         <Link to={"/login"}><li>Login</li></Link>
                     </ul>
                 </nav>
@@ -74,17 +55,17 @@ const LandingPage = () => {
                 <div className="App">
                     <SlideImage
                         imgs={[
-                            sliderOne,
-                            sliderTwo,
                             sliderThree,
-                            sliderFour
+                            sliderFour,
+                            sliderOne,
+                            sliderTwo
                         ]}
                     />
                 </div>
             </main>
 
             <footer>
-                <p>&copy;2022 Siapkenas.com, <span style={{fontStyle:"italic"}}>All rights reserved</span></p>
+                <p>&copy;Maimo CopyRight 2022, siapkenas.com, <span style={{fontStyle:"italic"}}>All rights reserved</span></p>
             </footer>
         </div>
     )

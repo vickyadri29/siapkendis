@@ -7,13 +7,13 @@ import { Link } from "react-router-dom";
 import photoProfile from '../../img/pp-profile.png';
 
 
-const dataVehicles = () => {
-  return (
-    <div className="container">
-        <>
-        <ChangePageTitle pageTitle={"Tambah Data Vehicles"}/>
-        </>
-        <header>
+const DataReport = () => {
+    return (
+        <div className="container">
+            <>
+            <ChangePageTitle pageTitle={"Tambah Data Laporan"}/>
+            </>
+            <header>
                 <Link to={"/dashboard"}><h1>SIAPKENDIS</h1></Link>
 
                 <ul className="nav-menu">
@@ -31,9 +31,10 @@ const dataVehicles = () => {
                     <Link to={'/'}><li className="logout">Logout</li></Link>
                 </ul>
             </header>
+
             <main>
                 <article className="header-dashboard">
-                    <h2>Pemegang Kendaraan</h2>
+                    <h2>Data Laporan</h2>
                     <div className="profile">
                         <p>Selamat Datang, <span>Admin!</span></p>
                         <img src={photoProfile} alt="profile" />
@@ -41,53 +42,39 @@ const dataVehicles = () => {
                 </article>
 
                 <article className="contents">
-                    <h3>Data Kendaraan</h3>
-                    <button>Tambah Data</button>
+                    <h3>Tambah Data Laporan</h3>
                 </article>
-    
+
                 <div className="table-data-vehicles">
                     <form action="">
                         <label htmlFor="id">
                             ID<br />
-                            <input type="text" name="id"  className="id"/>
-                        </label>
-                        <label htmlFor="nama">
-                            Nama Kendaraan<br />
-                            <input type="text" name="nama"  className="name"/>
+                            <input type="text" name="id"/>
                         </label>
                         <label htmlFor="merk">
-                            Merk <br />
+                            Nama Kendaraan <br />
+                            <input type="text" name="merk" />
+                        </label>
+                        <label htmlFor="merk">
+                            Nama Peminjam <br />
                             <input type="text" name="merk" />
                         </label>
                         <label htmlFor="noRangka">
-                            No.Rangka <br />
+                            No.HP <br />
                             <input type="text" name="noRangka" />
                         </label>
-                        <label htmlFor="noMesin">
-                            No.Mesin <br />
-                            <input type="text" name="noMesin" />
+                        <label htmlFor="merk">
+                            Tgl. Peminjam <br />
+                            <input type="text" name="merk" />
                         </label>
-                        <label htmlFor="noBPKB">
-                            No.BPKB <br />
-                            <input type="text" name="noBPKB" />
+                        <label htmlFor="merk">
+                            Tgl. Kembali <br />
+                            <input type="text" name="merk" />
                         </label>
-                        <label htmlFor="noPolisi">
-                            No.Polisi <br />
-                            <input type="text" name="noPolisi" />
+                        <label htmlFor="merk">
+                            Print<br />
+                            <input type="text" name="merk" />
                         </label>
-                        <label htmlFor="tahun">
-                            Tahun <br />
-                            <input type="number" name="tahun" />
-                        </label>
-                        <label htmlFor="status">
-                            Status <br />
-                            <input type="text" name="status" />
-                        </label>
-                        <label htmlFor="keterangan">
-                            Keterangan <br />
-                            <input type="text" name="keterangan" />
-                        </label>
-
                     </form>
                     <div className="btn-add">
                         <div className="btn-left">
@@ -98,9 +85,8 @@ const dataVehicles = () => {
                     </div>
                 </div>
             </main>
-        
-    </div>
-  );
+        </div>
+    )
 }
 
-export default dataVehicles;
+export default DataReport

@@ -13,6 +13,7 @@ import AddDataVehicles from './components/addData/DataVehicles';
 import AddDataAdmin from './components/addData/DataAdmin';
 import AddDataUser from './components/addData/DataUser';
 import AddDataHolder from './components/addData/DataHolder';
+import AddDataReport from './components/addData/DataReport';
 
 export default function App() {
   const location = useLocation;
@@ -38,6 +39,7 @@ export default function App() {
         <Route path='/add-data-admin' element={<AddDataAdmin />} />
         <Route path='/add-data-user' element={<AddDataUser />} />
         <Route path='/add-data-holder' element={<AddDataHolder/>} />
+        <Route path='/add-data-report' element={<AddDataReport/>} />
       </Routes>
     </BrowserRouter>
   )

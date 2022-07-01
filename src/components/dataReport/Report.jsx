@@ -2,6 +2,7 @@ import React from "react";
 
 import { Link } from "react-router-dom";
 
+import ChangePageTitle from '../ChangePageTitle';
 import './styles.css';
 
 import photoProfile from '../../img/pp-profile.png'
@@ -16,6 +17,9 @@ const Report = () =>{
 
     return (
         <div className="container">
+            <>
+            <ChangePageTitle pageTitle={"Data Laporan"}/>
+            </>
             <header>
                 <Link to={"/dashboard"}><h1>SIAPKENDIS</h1></Link>
 
@@ -46,7 +50,7 @@ const Report = () =>{
 
                 <article className="contents">
                     <h3>Data Laporan</h3>
-                    <Link to={"/add-data-user"}><button>Tambah Data</button></Link>
+                    <Link to={"/add-data-report"}><button>Tambah Data</button></Link>
                 </article>
 
                 <div className="table-vehicles">

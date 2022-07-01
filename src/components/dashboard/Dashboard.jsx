@@ -1,6 +1,7 @@
 import React  from "react";
 import { Link } from 'react-router-dom';
 
+import ChangePageTitle from '../ChangePageTitle';
 import './styles.css'
 
 import photoProfile from '../../img/pp-profile.png'
@@ -8,6 +9,9 @@ import photoProfile from '../../img/pp-profile.png'
 const Dashboard = () => {
     return (
         <div className="container">
+            <>
+            <ChangePageTitle pageTitle={"Dashboard"}/>
+            </>
             <header>
                 <Link to={"/dashboard"}><h1>SIAPKENDIS</h1></Link>
 

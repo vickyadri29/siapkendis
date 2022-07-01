@@ -80,12 +80,13 @@ body {
 .login input {
     font-family: 'Raleway', sans-serif;
     padding: 10px 21px;
-    width: 22rem;
+    width: 25rem;
     margin: 8px 0;
     background: #FFFFFF;
     border: 2px solid #17515E;
     border-radius: 10px;
-}
+} 
+
 
 .login p {
     color: #343840;

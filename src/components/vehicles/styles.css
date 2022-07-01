@@ -1,6 +1,25 @@
 @import url('https://fonts.googleapis.com/css2?family=Raleway:ital,wght@0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,700&display=swap');
 
+::-webkit-scrollbar {
+    width: 10px;
+    border-radius: 20px;
+}
+  
+::-webkit-scrollbar-track {
+    background: #f1f1f1; 
+}
+   
+::-webkit-scrollbar-thumb {
+    background: #17515E; 
+}
+
+::-webkit-scrollbar-thumb:hover {
+    background: #1d6172; 
+}
+
+
 body {
+    overflow-x: hidden;
     font-family: 'Raleway', sans-serif;
     margin: 0;
     padding: 0;
@@ -185,11 +204,13 @@ main {
 }
 
 .table-vehicles {
-    margin: 2rem;
-    padding: 2rem;
+    margin: 0 2rem;
+    padding: 1rem 1.4rem;
     background: #FFFFFF;
     box-shadow: -2px -1px 6px rgba(0, 0, 0, 0.25), 2px 2px 6px rgba(0, 0, 0, 0.25);
     border-radius: 10px;
+    overflow-x: hidden;
+    height: 23rem;
 }
 
 .table-vehicles table, th {
@@ -197,15 +218,12 @@ main {
     border: 1px solid #8E8E8E;
 }
 
-.table-vehicles tr {
-    text-align: center;
-    border: 1px solid #8E8E8E;
-}
 
 .table-vehicles td {
     text-align: center;
     border: 1px solid #8E8E8E;
 }
+
 
 .table-vehicles table {
     margin: 1rem 0;
@@ -223,6 +241,10 @@ main {
 .table-vehicles table tr td {
     font-family: Arial, Helvetica, sans-serif;
     padding: 1.2rem 0;
+}
+
+.table-vehicles table tr:nth-child(even) {
+    background-color: #52BC68;
 }
 
 .table-vehicles table tr td a {

@@ -1,14 +1,16 @@
 import React from "react";
 
+import ChangePageTitle from '../ChangePageTitle';
+import './styles.css';
 import { Link } from "react-router-dom";
-
 import photoProfile from '../../img/pp-profile.png';
-
-import './styles.css'
 
 const dataHolder = () => {
   return (
     <div className="container">
+        <>
+        <ChangePageTitle pageTitle={"Tambah Data Pemegang"}/>
+        </>
         <header>
                 <Link to={"/dashboard"}><h1>SIAPKENDIS</h1></Link>
 

@@ -1,5 +1,6 @@
 import React from "react";
 
+import ChangePageTitle from '../ChangePageTitle';
 import './styles.css';
 
 import { Link } from "react-router-dom";
@@ -16,6 +17,9 @@ const User = () => {
 
     return (
         <div className="container">
+            <>
+            <ChangePageTitle pageTitle={"Data User"} />
+            </>
             <header>
                 <Link to={"/dashboard"}><h1>SIAPKENDIS</h1></Link>
 

@@ -2,6 +2,7 @@ import React, { useState } from "react";
 
 import { Link } from "react-router-dom";
 
+import ChangePageTitle from '../ChangePageTitle';
 import photoProfile from '../../img/pp-profile.png';
 import './styles.css'
 
@@ -9,6 +10,9 @@ const dataAdmin = () => {
     const [val, setVal] = useState();
     return (
     <div className="container">
+        <>
+        <ChangePageTitle pageTitle={"Tambah Data Admin"}/>
+        </>
         <header>
                 <Link to={"/dashboard"}><h1>SIAPKENDIS</h1></Link>
 

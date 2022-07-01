@@ -1,5 +1,6 @@
 import React from "react";
 
+import ChangePageTitle from '../ChangePageTitle';
 import { Link } from "react-router-dom";
 
 import photoProfile from '../../img/pp-profile.png';
@@ -15,6 +16,9 @@ const Holder = () => {
 
     return (
         <div className="container">
+            <>
+            <ChangePageTitle pageTitle={"Data Pemegang Kendaraan"}/>
+            </>
             <header>
                 <Link to={"/dashboard"}><h1>SIAPKENDIS</h1></Link>
 

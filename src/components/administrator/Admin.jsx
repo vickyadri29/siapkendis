@@ -1,4 +1,7 @@
 import React from "react";
+
+import ChangePageTitle from '../ChangePageTitle';
+
 import './styles.css';
 import { Link } from "react-router-dom";
 
@@ -8,12 +11,16 @@ const Admin = () => {
     const admin = (
         [
             {id:1, nama: "Admin", email: "administrator@gmail.com", noHP: "082368423456"},
-            {id:2, nama: "Jindan", email: "jindanza@gmail.com", noHP: "085376544457"}
+            {id:2, nama: "Superuser", email: "superuser@gmail.com", noHP: "085376544457"},
+            {id:2, nama: "SuperAdmin", email: "superadmin@gmail.com", noHP: "081224532111"}
         ]
     ) 
 
     return (
         <div className="container">
+            <>
+            <ChangePageTitle pageTitle={"Data Admin"}/>
+            </>
             <header>
                 <Link to={"/dashboard"}><h1>SIAPKENDIS</h1></Link>
 

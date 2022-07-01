@@ -1,6 +1,7 @@
 import React from "react";
 import { Link } from "react-router-dom"
 
+import ChangePageTitle from '../ChangePageTitle';
 import './styles.css';
 import iconAdmin from '../../img/admin.png';
 import iconVehicle from '../../img/vehicle.png';
@@ -9,6 +10,9 @@ import iconPrint from '../../img/print.png';
 function Login() {
     return (
         <div className="main">
+            <>
+            <ChangePageTitle pageTitle={"Halaman Login"} />
+            </>
             <article className="title">
                 <h1>SIAPKENDIS</h1>
                 <h2>Sistem Informasi Pengelolaan Kendaraan Dinas</h2>
