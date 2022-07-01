@@ -4,7 +4,7 @@ import { Link } from "react-router-dom";
 import './styles.css';
 import Logo from '../../img/logo1.png';
 
-import { Zoom } from 'react-slideshow-image';
+import { Fade } from 'react-slideshow-image';
 import 'react-slideshow-image/dist/styles.css';
 
 import sliderOne from '../../img/img1.jpeg';
@@ -41,11 +41,11 @@ class LandingPage extends React.Component {
             <main>
                 <article>
                     <div>
-                       <Zoom scale={0.4}>
+                       <Fade>
                            {
                                slideImages.map((each, index) => <img key={index} style={{width: "100%"}} src={each} />)
                            }
-                       </Zoom>
+                       </Fade>
                     </div>
                 </article>
             </main>
