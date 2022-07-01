@@ -43,7 +43,7 @@ class LandingPage extends React.Component {
                     <div>
                        <Fade>
                            {
-                               slideImages.map((each, index) => <img key={index} style={{width: "100%"}} src={each} />)
+                               slideImages.map((each, index) => <img key={index} style={{width: "100%"}} src={each} alt="slider" />)
                            }
                        </Fade>
                     </div>

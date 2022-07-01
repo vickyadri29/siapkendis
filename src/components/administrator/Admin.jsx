@@ -1,12 +1,11 @@
 import React from "react";
 import './styles.css';
 import { Link } from "react-router-dom";
-import { useState } from "react";
 
 import photoProfile from '../../img/pp-profile.png';
 
 const Admin = () => {
-    const [admin, setAdmin] = useState(
+    const admin = (
         [
             {id:1, nama: "Admin", email: "administrator@gmail.com", noHP: "082368423456"},
             {id:2, nama: "Jindan", email: "jindanza@gmail.com", noHP: "085376544457"}

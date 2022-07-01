@@ -5,10 +5,9 @@ import { Link } from "react-router-dom";
 
 import photoProfile from '../../img/pp-profile.png'
 
-import { useState } from "react";
 
 const Vehicles = () => {
-    const [vehicles, setVehicles] = useState(
+    const vehicles = (
         [
             {id:1, nama: "Mio", merk:"Yamaha", noRangka: 9235553, noMesin: 5432346, noBPKB: 129423, noPolisi: 5342346, tahun:2022, status: "Tersedia", keterangan: "Ini adalah Kendaraan"}
         ]
@@ -66,10 +65,10 @@ const Vehicles = () => {
                                 <th>Action</th>
                             </tr>
                         </thead>
-                        {vehicles.map((val, key) => {
+                        {vehicles.map((val, index) => {
                             return (
                                 <tbody>
-                                    <tr key={key}>
+                                    <tr key={index}>
                                         <td>{val.id}</td>
                                         <td>{val.nama}</td>
                                         <td>{val.merk}</td>

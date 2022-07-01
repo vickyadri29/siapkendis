@@ -1,6 +1,5 @@
 import React from "react";
 
-import { useState } from "react";
 import { Link } from "react-router-dom";
 
 import './styles.css';
@@ -8,7 +7,7 @@ import './styles.css';
 import photoProfile from '../../img/pp-profile.png'
 
 const Report = () =>{
-    const [report, setReport] = useState(
+    const report = (
         [
             {id:1, namaKendaraan: "Mio 125CC", namaPeminjam: "Putra", noHP: "082385676651", tglGuna: "29-09-2022", tglKembali: "2-10-2022"},
             {id:2, namaKendaraan: "Fu Merah", namaPeminjam: "Sinta", noHP: "082385664542", tglGuna: "01-10-2022", tglKembali: "5-10-2022"}

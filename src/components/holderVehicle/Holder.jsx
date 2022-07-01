@@ -1,12 +1,11 @@
 import React from "react";
 
-import { useState } from "react";
 import { Link } from "react-router-dom";
 
 import photoProfile from '../../img/pp-profile.png';
 
 const Holder = () => {
-    const [holder, setHolder] = useState(
+    const holder = (
         [
             {id:1, nama: "Putra", email: "Putra@gmail.com", noHP: "082385674355"},
             {id:2, nama: "Putri", email: "Putri@gmail.com", noHP: "082355663445"},

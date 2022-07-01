@@ -37,15 +37,15 @@ const Dashboard = () => {
                 </article>
 
                 <article className="content">
-                    <div class="card vehicle">
+                    <div className="card vehicle">
                         <h3>DATA KENDARAAN</h3>
                         <p>4<span>Kendaraan</span></p>
                     </div>
-                    <div class="card user">
+                    <div className="card user">
                         <h3>DATA USER</h3>
                         <p>6<span>User</span></p>
                     </div>
-                    <div class="card holder">
+                    <div className="card holder">
                         <h3>DATA PEMEGANG</h3>
                         <p>2<span>Pemegang</span></p>
                     </div>

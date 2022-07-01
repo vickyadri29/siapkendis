@@ -2,13 +2,12 @@ import React from "react";
 
 import './styles.css';
 
-import { useState } from "react";
 import { Link } from "react-router-dom";
 
 import photoProfile from '../../img/pp-profile.png'
 
 const User = () => {
-    const [user, setUser] = useState(
+    const user = (
         [
             {id:1, nama: "User", email: "user@gmail.com", noHP: "082385676651"},
             {id:2, nama: "Putra", email: "putra@gmail.com", noHP: "082355664443"}
