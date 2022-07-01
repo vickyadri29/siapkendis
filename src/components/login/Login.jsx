@@ -31,11 +31,15 @@ function Login() {
             <article className="login">
                     <h2>Silahkan Login</h2>
                 <div className="login-center">
-                    <tr>
-                        <td><input type="text" name="username" placeholder="Masukan Username" /></td>
-                        <td></td>
-                        <td><input type="password" name="password" placeholder="Masukan Password" /></td>
-                    </tr>
+                    <table>
+                        <tbody>
+                            <tr>
+                                <td><input type="text" name="username" placeholder="Masukan Username" /></td>
+                                <td></td>
+                                <td><input type="password" name="password" placeholder="Masukan Password" /></td>
+                            </tr>
+                        </tbody>
+                    </table>
                 </div>
                     <p>Lupa Password? Klik Disini</p>
                     <Link to={"/dashboard"}><button className="btn-login">Login</button></Link>

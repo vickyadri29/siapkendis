@@ -12,14 +12,16 @@ import sliderTwo from '../../img/img2.jpeg';
 import sliderThree from '../../img/img3.jpeg';
 import sliderFour from '../../img/img4.jpeg';
 
-const landingPage = () => {
-    const slideImages = [
-        sliderOne,
-        sliderTwo,
-        sliderThree,
-        sliderFour
-    ]
+const slideImages = [
+    sliderOne,
+    sliderTwo,
+    sliderThree,
+    sliderFour
+]
 
+class LandingPage extends React.Component {
+    
+    render(){
     return (
         <div className="landingpage-container">
             <header>
@@ -64,6 +66,7 @@ const landingPage = () => {
             </footer>
         </div>
     )
+    }
 }
 
-export default landingPage
+export default LandingPage;
