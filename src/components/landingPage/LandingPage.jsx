@@ -1,27 +1,59 @@
-import React from "react";
+import React, { useEffect, useState } from "react";
 import { Link } from "react-router-dom";
 
 import './styles.css';
 import Logo from '../../img/logo1.png';
-
-import { Fade } from 'react-slideshow-image';
-import 'react-slideshow-image/dist/styles.css';
 
 import sliderOne from '../../img/img1.jpeg';
 import sliderTwo from '../../img/img2.jpeg';
 import sliderThree from '../../img/img3.jpeg';
 import sliderFour from '../../img/img4.jpeg';
 
-const slideImages = [
-    sliderOne,
-    sliderTwo,
-    sliderThree,
-    sliderFour
-]
+// const Thumbnail = ({ arr, image, index }) => {
+//     return (<div className="thumbnail">
+//         {
+//             arr.map((imgsrc, i) => (
+//                 <img key={i} height="50" src={imgsrc} onClick={()=>image(i)} className={index===1 ? 'active' : ''}/>
+//             ))}
+//             </div>
+//     )
+// }
 
-class LandingPage extends React.Component {
+const SlideImage = ({ imgs }) => {
+    const [index, setIndex] = useState(0)
+
+    useEffect(() => {
+        setIndex(0)
+    }, [])
+
+    const next = () => {
+        if (index === imgs.length -1){
+            setIndex(0)
+        }else{
+            setIndex(index + 1)
+        }
+    }
+    const prev = () => {
+        if (index === 0) {
+            setIndex(imgs.length - 1)
+        } else {
+            setIndex(index - 1)
+        }
+    }
+
+    return ( 
+        <div className="slideshow">
+            <img className="mainImg" src={imgs[index]} alt="sliders" />
+            <div className="actions">
+                <button onClick={prev}>Prev</button>
+                <button onClick={next}>Next</button>
+            </div>
+    </div>
+    )
+}
+
+const LandingPage = () => {
     
-    render(){
     return (
         <div className="landingpage-container">
             <header>
@@ -39,15 +71,16 @@ class LandingPage extends React.Component {
             </header>
 
             <main>
-                <article>
-                    <div>
-                       <Fade>
-                           {
-                               slideImages.map((each, index) => <img key={index} style={{width: "100%"}} src={each} alt="slider" />)
-                           }
-                       </Fade>
-                    </div>
-                </article>
+                <div className="App">
+                    <SlideImage
+                        imgs={[
+                            sliderOne,
+                            sliderTwo,
+                            sliderThree,
+                            sliderFour
+                        ]}
+                    />
+                </div>
             </main>
 
             <footer>
@@ -55,7 +88,6 @@ class LandingPage extends React.Component {
             </footer>
         </div>
     )
-    }
 }
 
 export default LandingPage;

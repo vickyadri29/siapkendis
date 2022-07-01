@@ -1,3 +1,65 @@
+* {
+    box-sizing: border-box;
+}
+
+body {
+    margin: 0;
+}
+
+.active {
+    border: 1px solid #17515E;
+    transform: scale(1.3);
+    transition: all 300ms;
+}
+
+.app {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-content: center;
+    align-items: center;
+}
+
+.slideshow {
+    position: relative;
+}
+
+.mainImg {
+    transition: all 200ms;
+    width: 100%;
+}
+
+.actions {
+    position: absolute;
+    top: 50%;
+    width: 100%;
+    display: flex;
+    justify-content: space-between;
+}
+
+.actions button {
+    color: #fff;
+    background: #17515E;
+    border: none;
+    cursor: pointer;
+    padding: 10px;
+    margin: 5px;
+}
+
+.actions button:active {
+    color: #fff;
+    background: #0b313a;
+    border: none;
+    cursor: pointer;
+    padding: 10px;
+    margin: 5px;
+}
+
+.thumbnail {
+    display: flex;
+    justify-content: center;
+}
+
 .landingpage-container header{
     display: flex;
     flex-direction: row;
@@ -25,25 +87,6 @@ header nav ul{
 nav ul li {
     margin-left: 3rem;
 }
-
-.each-slide-effect > div {
-    display: flex;
-    align-items: center;
-    justify-content: center;
-    background-size: cover;
-    width: 100%;
-    height: 100vh;
-}
-  
-/* .each-slide-effect span {
-    font-size: 1rem;
-    margin-top: 35rem;
-    padding: 0.5rem 2rem;
-    background: #ffffff;
-    border: 1px solid #ffffff;
-    border-radius: 5px;
-    text-align: center;
-} */
 
 footer {
     font-weight: 600;
