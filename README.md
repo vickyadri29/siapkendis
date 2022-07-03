@@ -1,6 +1,7 @@
-# Getting Started with Create React App
+# SIAPKENDIS
 
-This project was bootstrapped with [Create React App](https://github.com/facebook/create-react-app).
+## Technologies Used
+- React JS
 
 ## Available Scripts
 
